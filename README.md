@@ -9,10 +9,10 @@ _A comprehensive toolkit to quickly evaluate a location._
 ### The main features:
 - Let users know the green buildings(LEED certified from official database) around a customized location on a map
 - Let users evaluate a customized location by:
-  1. the number and markers of intersections in a 400m radius
-  2. the number and markers of transit stops in a 400m radius
-  3. the number and markers of all serviced in a 800m walking distance
-  4. draw and calculate a area on the map, eg: green open space
+  * the number and markers of intersections in a 400m radius
+  * the number and markers of transit stops in a 400m radius
+  * the number and markers of all serviced in a 800m walking distance
+  * draw and calculate a area on the map, eg: green open space
 - Users can easily swith between two features or make a new search in the nav bar
 
 ### Future features:
@@ -33,17 +33,17 @@ _A comprehensive toolkit to quickly evaluate a location._
 
 ### Seeding & Creating the database
 
-First, `$ knex seed:run`
-Then, manually run this file:
-`$ node  ./db/seed_file_to_be_ran_manually/5_projects_lat_lng_seed.js`
+1. ```$ knex seed:run```
+2. manually run this file:
+```$ node  ./db/seed_file_to_be_ran_manually/5_projects_lat_lng_seed.js```
 
 Note: This file cannot be run with `$ knex seed:run` because it makes http requests.
 
 ### Running the Servers
 
-First, running the client server from root directory:
+* running the client server from root directory:
 `$ cd react-server`
 `$ npm start`
 
-Then, running the backend server from root directory:
+* running the backend server from root directory:
 `$ npm start`
