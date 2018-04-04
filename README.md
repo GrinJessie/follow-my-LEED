@@ -20,6 +20,15 @@ _A comprehensive toolkit to quickly evaluate a location._
 - Create a breakdown table for services, different icons for different services
 - Url sharing with place ID
 
+## Demo
+
+![Alt text](https://github.com/GrinJessie/follow-my-LEED/blob/master/docs/evaluate.gif)
+
+![Alt text](https://github.com/GrinJessie/follow-my-LEED/blob/master/docs/LEED%20buildings.png)
+
+![Alt text](https://github.com/GrinJessie/follow-my-LEED/blob/master/docs/Tech%20stack.png)
+
+
 ## Pre-Install Tech Requirements
 - PostgreSQL
 - Node
