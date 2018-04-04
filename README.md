@@ -1,12 +1,12 @@
 # Follow My LEED
 _A comprehensive toolkit to quickly evaluate a location._
 
-This goal of the this project is to:
+### This goal of the this project is to:
 - Automate green building certification process
 - Solve the time-consuming problem when collecting and filtering data that meet the certification.
 - We found that it also very helpful for exploring and visualizing information on a map for many industries and people to quickly evaluate location, eg: real estate, new stores opening, house hunters.
 
-##The main features:
+### The main features:
 - Let users know the green buildings(LEED certified from official database) around a customized location on a map
 - Let users evaluate a customized location by:
   1. the number and markers of intersections in a 400m radius
@@ -15,7 +15,7 @@ This goal of the this project is to:
   4. draw and calculate a area on the map, eg: green open space
 - Users can easily swith between two features or make a new search in the nav bar
 
-##Future features:
+### Future features:
 - Fix bugs in marker clusters hide/show
 - Create a breakdown table for services, different icons for different services
 - Url sharing with place ID
@@ -33,17 +33,17 @@ This goal of the this project is to:
 
 ### Seeding & Creating the database
 
-First, ```$ knex seed:run```
-Then, manually run this file: *./db/seed_file_to_be_ran_manually/5_projects_lat_lng_seed.js*
-by ```$ node  ./db/seed_file_to_be_ran_manually/5_projects_lat_lng_seed.js```
+First, `$ knex seed:run`
+Then, manually run this file:
+`$ node  ./db/seed_file_to_be_ran_manually/5_projects_lat_lng_seed.js`
 
 Note: This file cannot be run with `$ knex seed:run` because it makes http requests.
 
 ### Running the Servers
 
 First, running the client server from root directory:
-```$ cd react-server```
-```$ npm start```
+`$ cd react-server`
+`$ npm start`
 
 Then, running the backend server from root directory:
-```$ npm start```
+`$ npm start`
