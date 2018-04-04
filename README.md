@@ -1,14 +1,49 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+# Follow My LEED
+_A comprehensive toolkit to quickly evaluate a location._
 
-Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+This goal of the this project is to:
+- Automate green building certification process
+- Solve the time-consuming problem when collecting and filtering data that meet the certification.
+- We found that it also very helpful for exploring and visualizing information on a map for many industries and people to quickly evaluate location, eg: real estate, new stores opening, house hunters.
 
-## Seed Files
+##The main features:
+- Let users know the green buildings(LEED certified from official database) around a customized location on a map
+- Let users evaluate a customized location by:
+  1. the number and markers of intersections in a 400m radius
+  2. the number and markers of transit stops in a 400m radius
+  3. the number and markers of all serviced in a 800m walking distance
+  4. draw and calculate a area on the map, eg: green open space
+- Users can easily swith between two features or make a new search in the nav bar
 
-On top of running `knex seed:run`, please also manually run this file: *./db/seed_file_to_be_ran_manually/5_projects_lat_lng_seed.js*
+##Future features:
+- Fix bugs in marker clusters hide/show
+- Create a breakdown table for services, different icons for different services
+- Url sharing with place ID
 
-This file cannot be run with `knex seed:run` because it makes http requests. 
+## Pre-Install Tech Requirements
+- PostgreSQL
+- Node
+- NPM
 
-## Screenshots - In Progress, more to be added
+## Instructions
 
-!["show Projects"](https://github.com/viccyc/follow-my-LEED/blob/master/docs/showProjects.png)
+### Installing dependencies
+
+```$ npm install```
+
+### Seeding & Creating the database
+
+First, ```$ knex seed:run```
+Then, manually run this file: *./db/seed_file_to_be_ran_manually/5_projects_lat_lng_seed.js*
+by ```$ node  ./db/seed_file_to_be_ran_manually/5_projects_lat_lng_seed.js```
+
+Note: This file cannot be run with `$ knex seed:run` because it makes http requests.
+
+### Running the Servers
+
+First, running the client server from root directory:
+```$ cd react-server```
+```$ npm start```
+
+Then, running the backend server from root directory:
+```$ npm start```
