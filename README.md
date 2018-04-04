@@ -47,3 +47,8 @@ Note: This file cannot be run with `$ knex seed:run` because it makes http reque
 
 * running the backend server from root directory:
 `$ npm start`
+
+### Go to the website
+
+* hit http://localhost:3000/
+
