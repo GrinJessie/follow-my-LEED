@@ -8,7 +8,7 @@ _A comprehensive toolkit to quickly evaluate a location._
 
 ### The main features:
 - Let users know the green buildings(LEED certified from official database) around a customized location on a map
-- Let users evaluate a customized location by:
+- Let users evaluate a customized location by LEED rating systems:
   * the number and markers of intersections in a 400m radius
   * the number and markers of transit stops in a 400m radius
   * the number and markers of all serviced in a 800m walking distance
