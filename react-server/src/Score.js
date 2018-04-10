@@ -38,8 +38,8 @@ export default class Score extends Component {
     if (this.props.address) {
       // this.initMapAndMarker(this.props.address);
       const { showMarkers, hideMarkers} = this.initMapAndMarker(this.props.address);
-      this.setState({ 
-        showMarkers: showMarkers, 
+      this.setState({
+        showMarkers: showMarkers,
         hideMarkers: hideMarkers,
         // area: null,
         // streetNetwork: null, // count
@@ -54,8 +54,8 @@ export default class Score extends Component {
     if (this.props.address.id !== nextProps.address.id) {
     // this.initMapAndMarker(nextProps.address);
       const { showMarkers, hideMarkers} = this.initMapAndMarker(nextProps.address);
-      this.setState({ 
-        showMarkers: showMarkers, 
+      this.setState({
+        showMarkers: showMarkers,
         hideMarkers: hideMarkers,
         communityResources: null, // count
       });
@@ -507,25 +507,25 @@ export default class Score extends Component {
 
       showService(['supermarket'], 'Supermarket');
       // showService(['department_store', 'clothing_store'], 'Clothing store/department store selling clothes');
-      showService(['convenience_store'], 'Convenience Store');
-      showService(['hardware_store'], 'Hardware Store');
-      showService(['pharmacy'], 'Pharmacy');
-      showService(['bank'], 'Bank');
-      showService(['gym'], 'Gym, health club, exercise studio');
-      showService(['hair_care'], 'Hair care');
+      // showService(['convenience_store'], 'Convenience Store');
+      // showService(['hardware_store'], 'Hardware Store');
+      // showService(['pharmacy'], 'Pharmacy');
+      // showService(['bank'], 'Bank');
+      // showService(['gym'], 'Gym, health club, exercise studio');
+      // showService(['hair_care'], 'Hair care');
       // showService(['laundry'], 'Laundry/dry cleaner');
       // showService(['bar', 'cafe', 'restaurant'], 'Restaurant/café/diner');
-      showService(['restaurant'], 'Restaurant/café/diner');
+      // showService(['restaurant'], 'Restaurant/café/diner');
       // showService(['art_gallery', 'museum'], 'Cultural arts facility');
-      showService(['school'], 'Education facility');
+      // showService(['school'], 'Education facility');
       // showService(['bowling_alley', 'movie_theater'], 'Family entertainment venue');
       // showService(['local_government_office', 'city_hall'], 'Government office serving public on-site');
       // showService(['hospital', 'physiotherapist', 'dentist', 'doctor',], 'Medical clinic/office');
       // showService(['church'], 'Place of worship');
       // showService(['police', 'fire_station'], 'Police or fire station');
-      showService(['post_office'], 'Post office');
-      showService(['library'], 'Public library');
-      showService(['park'], 'Public park');
+      // showService(['post_office'], 'Post office');
+      // showService(['library'], 'Public library');
+      // showService(['park'], 'Public park');
     // }
 
     // get all ways around a certain address
@@ -668,7 +668,16 @@ export default class Score extends Component {
             <div id='map' style={{ height: `88vh`, width: `100%` }} />
           </div>
           <div id="tableDiv" className="col-lg-4 col-md-12 pr-0">
-            <ScoreTable address={this.props.address} area={this.state.area} criteriaClicked={this.state.criteriaClicked} handleClick={this.handleClick} streetNetwork={this.state.streetNetwork} communityResources={this.state.communityResources} transitStops={this.state.transitStops} showMarkers={this.state.showMarkers} hideMarkers={this.state.hideMarkers} />
+            <ScoreTable address={this.props.address}
+                        area={this.state.area}
+                        criteriaClicked={this.state.criteriaClicked}
+                        handleClick={this.handleClick}
+                        streetNetwork={this.state.streetNetwork}
+                        communityResources={this.state.communityResources}
+                        services={this.state.services}
+                        transitStops={this.state.transitStops}
+                        showMarkers={this.state.showMarkers}
+                        hideMarkers={this.state.hideMarkers} />
           </div>
         </div>
       </div>

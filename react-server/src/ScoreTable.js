@@ -75,6 +75,16 @@ class ScoreTable extends Component {
         return (<span>No area selected</span>)
       }
     }
+
+    let services = [];
+    for (let key in this.props.services){
+      services.push(
+        <tr>
+        <td>{key}</td>
+        <td>{this.props.services[key]}</td>
+        </tr>);
+    }
+
     return (
       <div>
         <table id="table" className="table table-bordered">
@@ -97,10 +107,19 @@ class ScoreTable extends Component {
               <td>{toggleButton('transit_stops')}</td>
             </tr>
             <tr>
-              <td><img src={communityresourcesImg} alt="communityresourcesImg" />  Services</td>
+              <td>
+                <a data-toggle="collapse" href="#ComSerDetails" aria-expanded="false" aria-controls="ComSerDetails">
+                  <img src={communityresourcesImg} alt="communityresourcesImg" />
+                  Services
+                </a>
+                {/* <img src={communityresourcesImg} alt="communityresourcesImg" />  Services */}
+                </td>
               <td>{this.props.communityResources}</td>
               <td>{toggleButton('community_resources')}</td>
             </tr>
+            <div className="collapse" id="ComSerDetails">
+              {services}
+            </div>
             <tr>
               <th scope="row">Total</th>
               <th scope="row">{this.props.streetNetwork + this.props.communityResources + this.props.transitStops}</th>
